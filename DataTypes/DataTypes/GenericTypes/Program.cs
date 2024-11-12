@@ -36,6 +36,17 @@ pointGeneric.Y = 0.2m;
 PointGeneric<double> pointRandom = new PointGeneric<double>();
 
 
+Gitar[] gitarlar = new Gitar[2];
+gitarlar[0] = new ElektroGitar();
+
+Gitar[] elektroGitarlar = new ElektroGitar[2];
+//elektroGitarlar[0] = new Gitar();
+
+List<ElektroGitar> elektroGitars = new List<ElektroGitar>();
+//elektroGitars.Add(new Gitar());
 
 
+Simple simple = new Simple();
+simple.Process(new ElektroGitar());
+simple.Process(new Gitar());
 
