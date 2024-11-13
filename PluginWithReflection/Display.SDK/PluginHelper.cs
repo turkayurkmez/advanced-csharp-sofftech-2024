@@ -46,7 +46,46 @@ namespace Display.SDK
         private static void addReference(string dllFile, List<Plug> plugs)
         {
             var assembly = Assembly.LoadFile(dllFile);
-            //bu dllFile'in benim için yazılmış olduğunu nereden bileceğim?
+            var types = assembly.GetTypes();
+            types?.ToList().ForEach(type =>
+            {
+                //bu dllFile'in benim için yazılmış olduğunu nereden bileceğim?
+                Plug plug = handShakeApplicationAndType(type, dllFile);
+                if (plug != null)
+                {
+                    plugs.Add(plug);
+                }
+            });
+          
+            
         }
+
+        private static Plug handShakeApplicationAndType(Type type, string dllFile)
+        {
+            Plug plug = null;
+            if (type.GetInterface("IPlugin") != null)
+            {
+                plug = new Plug();
+                plug.Path = dllFile;
+                plug.FullName = type.FullName;
+                /*
+                   KarePlugin kare = new KarePlugin();
+                   plug.Name = kare.Name
+                 */
+                dynamic instance = Activator.CreateInstance(type);
+                //plug.Name = instance.GetType().GetProperty("Name").GetValue(instance).ToString();
+                plug.Name = instance.Name;
+                
+            }
+            return plug;
+        }
+
+        public static IPlugin CreateInstance(Plug activePlug)
+        {
+            Assembly assembly = Assembly.LoadFrom(activePlug.Path);
+            var instance = assembly.CreateInstance(activePlug.FullName);
+            return (IPlugin)instance;
+        }
+
     }
 }
