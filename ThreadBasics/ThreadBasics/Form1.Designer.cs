@@ -34,9 +34,12 @@
             progressBar1 = new ProgressBar();
             groupBox1 = new GroupBox();
             groupBox2 = new GroupBox();
+            button4 = new Button();
             button3 = new Button();
             progressBar2 = new ProgressBar();
             label2 = new Label();
+            richTextBox1 = new RichTextBox();
+            button5 = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             SuspendLayout();
@@ -91,15 +94,26 @@
             // 
             // groupBox2
             // 
+            groupBox2.Controls.Add(button4);
             groupBox2.Controls.Add(button3);
             groupBox2.Controls.Add(progressBar2);
             groupBox2.Controls.Add(label2);
             groupBox2.Location = new Point(386, 112);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(295, 155);
+            groupBox2.Size = new Size(295, 220);
             groupBox2.TabIndex = 5;
             groupBox2.TabStop = false;
             groupBox2.Text = "Task";
+            // 
+            // button4
+            // 
+            button4.Location = new Point(124, 170);
+            button4.Name = "button4";
+            button4.Size = new Size(75, 23);
+            button4.TabIndex = 4;
+            button4.Text = "button4";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // button3
             // 
@@ -127,11 +141,31 @@
             label2.TabIndex = 1;
             label2.Text = "label2";
             // 
+            // richTextBox1
+            // 
+            richTextBox1.Location = new Point(746, 114);
+            richTextBox1.Name = "richTextBox1";
+            richTextBox1.Size = new Size(565, 308);
+            richTextBox1.TabIndex = 6;
+            richTextBox1.Text = "";
+            // 
+            // button5
+            // 
+            button5.Location = new Point(1236, 85);
+            button5.Name = "button5";
+            button5.Size = new Size(75, 23);
+            button5.TabIndex = 7;
+            button5.Text = "button5";
+            button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1350, 450);
+            Controls.Add(button5);
+            Controls.Add(richTextBox1);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Controls.Add(button2);
@@ -156,5 +190,8 @@
         private Button button3;
         private ProgressBar progressBar2;
         private Label label2;
+        private Button button4;
+        private RichTextBox richTextBox1;
+        private Button button5;
     }
 }

@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadBasics", "ThreadBasic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadProblems", "ThreadProblems\ThreadProblems.csproj", "{8C63ED80-AE58-42C0-955E-ADCDC160299E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CancellationTask", "CancellationTask\CancellationTask.csproj", "{0B18AC83-1459-473F-8EED-F63D765E0E5D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{8C63ED80-AE58-42C0-955E-ADCDC160299E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C63ED80-AE58-42C0-955E-ADCDC160299E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8C63ED80-AE58-42C0-955E-ADCDC160299E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B18AC83-1459-473F-8EED-F63D765E0E5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B18AC83-1459-473F-8EED-F63D765E0E5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B18AC83-1459-473F-8EED-F63D765E0E5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B18AC83-1459-473F-8EED-F63D765E0E5D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
