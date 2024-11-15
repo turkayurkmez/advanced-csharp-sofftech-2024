@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProductList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Products>
+    <Product>
+      <Id>1</Id>
+      <Name>
+        <Turkish>Dizüstü</Turkish>
+        <English>Laptop</English>
+      </Name>
+      <Description>Ürün 1 Açıklama</Description>
+      <Price>100</Price>
+    </Product>
+    <Product>
+      <Id>2</Id>
+      <Name>
+        <Turkish>Gömlek</Turkish>
+        <English>Shirt</English>
+      </Name>
+      <Description>Ürün 2 Açıklama</Description>
+      <Price>200</Price>
+    </Product>
+    <Product>
+      <Id>3</Id>
+      <Name>
+        <Turkish>Güneş gözlüğü</Turkish>
+        <English>Sunglasses</English>
+      </Name>
+      <Description>Ürün 3 Açıklama</Description>
+      <Price>500</Price>
+    </Product>
+  </Products>
+</ProductList>
